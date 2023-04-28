@@ -1,5 +1,31 @@
-.navigation {
+/* .navigation {
   display: none;
+} */
+
+.header {
+  font-size: 1.6rem;
+}
+
+.para {
+  font-size: 1.5rem;
+}
+
+.links {
+  top: 6rem;
+}
+
+.section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  overflow: hidden;
+  height: 70vh;
+
+  transition: all 0.5s;
+}
+
+.logo {
+  float: left;
 }
 
 .navigation__button {
