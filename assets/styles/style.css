@@ -826,9 +826,10 @@ a {
 
 .portfolio-boxes {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  padding: 1rem 7rem;
+  padding: 1rem 5rem;
 }
 
 .box-port {
@@ -869,8 +870,8 @@ a {
 }
 
 .box-port .images {
-  width: 55vh;
-  margin: 1rem 1rem;
+  width: 52vh;
+  margin: 1rem 2rem;
   border-radius: 5px;
   /* animation: picFade 0.5s ease; */
 }
