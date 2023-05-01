@@ -31,7 +31,7 @@ const stickyNav = function (entries) {
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0.8,
+  threshold: 0.9,
 });
 
 headerObserver.observe(head);
@@ -40,7 +40,6 @@ headerObserver.observe(head);
 
 homeBtn.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
-  homeBtn.style.borderBottom = "2px solid white";
 });
 
 ///////////////////////////////////////////////

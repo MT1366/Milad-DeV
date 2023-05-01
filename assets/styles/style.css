@@ -43,7 +43,7 @@ body::before {
 
 .hidden-preview {
   opacity: 0;
-  visibility: hidden;
+  display: none;
 }
 
 a {
@@ -139,9 +139,11 @@ a {
 
 .sticky {
   position: fixed;
-
-  background-color: rgba(186, 25, 25, 0.95);
   color: #000a11;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: #5c5b5b;
 }
 
 .logo {
@@ -149,6 +151,7 @@ a {
   letter-spacing: 6px;
   font-family: montserrat;
   color: white;
+  font-size: 2rem;
 }
 
 /* NAVBAR */
@@ -159,7 +162,7 @@ a {
   list-style: none;
   /* width: 50%; */
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
   transition: all 0.5s;
 }
 
@@ -222,7 +225,6 @@ a {
 .animatted-txt {
   animation: lenght 1s ease-in-out;
   display: block;
-  background-color: rebeccapurple;
   z-index: 100000;
 }
 
@@ -287,73 +289,62 @@ a {
 .aboute-me {
   display: flex;
   flex-direction: row;
-  margin: 2rem 5rem;
-
-  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  justify-content: space-between;
   position: relative;
-}
-
-.img {
-  display: block;
-  flex-direction: row;
-  position: relative;
-  margin: 1.5rem;
-  width: 100vw;
+  margin: 5rem;
 }
 
 .img::before {
   content: "";
-  position: relative;
+  position: absolute;
   /* display: block; */
   z-index: -1;
   width: 50vh;
-  height: 78vh;
-  left: 3.5rem;
-  top: 11rem;
-  background-image: url(./img/dots.png);
+  height: 53vh;
+  left: -1rem;
+  top: 7rem;
+  background-image: url(../img/dots.png);
 }
 
 .bio-txt {
-  display: block;
-  position: relative;
-  margin: 7rem 0;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 1rem;
   font-size: 1.5rem;
   color: #a2b7c3;
 }
 
-.bio-txt .bio_txt-2 {
-  display: block;
+.bio-title {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.bio_txt-2 {
   color: #343434;
   font-size: 1.9rem;
   font-weight: bold;
   position: relative;
-  top: -4.5rem;
   font-family: poppB;
 }
 
-.bio-txt .subtitle {
-  position: relative;
+.subtitle {
   font-size: 0.8rem;
   color: #999;
   letter-spacing: 2px;
-  top: -5.5rem;
-  font-size: 13px;
   font-weight: 600;
   font-family: poppXL;
 }
 
 .para-2 {
-  display: block;
-  line-height: 1.6;
   color: #748182;
-  position: relative;
-  top: -3.5rem;
   font-size: 0.8rem;
   letter-spacing: 1px;
   font-family: poppXL;
   font-weight: 600;
-  font-size: 15px;
-  margin: 0;
 }
 
 .milad {
@@ -364,11 +355,7 @@ a {
 
 /* BARS */
 
-.bars {
-  display: block;
-}
-
-.charts {
+/* .charts {
   display: block;
   color: white;
   z-index: 500;
@@ -380,10 +367,10 @@ a {
   left: 0px;
   color: white;
   z-index: 1000;
-}
+} */
 
 /* BARS ANIMATION */
-
+/* 
 @keyframes bars {
   0% {
     width: 16rem;
@@ -422,9 +409,9 @@ a {
   100% {
     width: 60vh;
   }
-}
+} */
 
-.web-desing .percent {
+/* .web-desing .percent {
   display: inline-block;
   position: absolute;
   font-family: poppXL;
@@ -433,16 +420,16 @@ a {
   left: 26rem;
   color: white;
   animation: per 1s ease-in-out;
-}
-
+} */
+/* 
 .web-desing {
   display: flex;
   flex-direction: column;
   position: relative;
   top: -1.2rem;
-}
+} */
 
-.web-desing label {
+/* .web-desing label {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -453,9 +440,9 @@ a {
   font-family: mont;
   color: #fff;
   font-weight: 800;
-}
+} */
 
-.web-desing::after {
+/* .web-desing::after {
   content: "";
   display: block;
   padding: 11px;
@@ -467,15 +454,15 @@ a {
   border-radius: 5px;
   z-index: -1;
   box-shadow: 0px 2px 7px rgb(20 10 5 / 15%) inset;
-}
+} */
 
-.percent {
+/* .percent {
   display: block;
   position: absolute;
   left: 10rem;
-}
+} */
 
-#web_desing {
+/* #web_desing {
   width: 90%;
   position: relative;
   background-color: #1c1c1c;
@@ -483,14 +470,14 @@ a {
   left: 0%;
   padding: 2.5px;
   animation: bars 1s ease-in-out;
-}
+} */
 
-#web_desing span {
+/* #web_desing span {
   position: absolute;
   left: 90%;
-}
+} */
 
-#branding {
+/* #branding {
   width: 80%;
   position: relative;
   background-color: #1c1c1c;
@@ -498,25 +485,25 @@ a {
   padding: 2.5px;
   left: 0%;
   animation: bars-2 1s ease-in-out;
-}
-#branding span {
+} */
+/* #branding span {
   position: absolute;
   left: 90%;
-}
+} */
 
-#development {
+/* #development {
   width: 85%;
   position: relative;
   background-color: #1c1c1c;
   border-radius: 5px;
   padding: 2.5px;
   animation: bars-3 1s ease-in-out;
-}
+} */
 
-#development span {
+/* #development span {
   position: absolute;
   left: 90%;
-}
+} */
 
 /* BUTTONS */
 
@@ -577,13 +564,13 @@ a {
   content: "";
   position: absolute;
   display: flex;
-  left: 43%;
+  left: 38%;
   z-index: 1;
   font-weight: bold;
-  width: 14%;
+  width: 25%;
   height: 10%;
-  top: 5rem;
-  background-image: url(./img/dots.png);
+  top: 5.5rem;
+  background-image: url(../img/dots.png);
 }
 
 .boxes {
@@ -660,31 +647,6 @@ a {
 /* PORTFOLIO SECTION */
 
 /* PREVIEW SECTION */
-
-.preview {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  padding: 5rem 2rem;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  /* top: 14rem; */
-}
-
-.preview::before {
-  content: "";
-  display: block;
-  position: absolute;
-  background-color: #0b0b0b;
-  width: 100%;
-  height: 150vh;
-  opacity: 0.8;
-  z-index: -1;
-  cursor: zoom-out;
-  /* top: 0rem; */
-}
 
 .btn-preview-close {
   display: block;
@@ -781,7 +743,7 @@ a {
   left: 0rem;
   height: 4%;
   top: 3.1rem;
-  background-image: url(./img/dots.png);
+  background-image: url(../img/dots.png);
 }
 
 .port-list {
@@ -833,6 +795,8 @@ a {
 
 .box-port {
   display: flex;
+  align-items: center;
+
   position: relative;
 
   transition: all 1s;
@@ -915,7 +879,7 @@ a {
   font-family: montserrat;
   font-size: 1.1rem;
   top: 25%;
-  left: 40%;
+  left: 38%;
 }
 
 .box-port:hover .icon-title {
@@ -937,16 +901,19 @@ a {
 }
 
 .port-icon {
+  flex-direction: row;
   display: none;
   position: absolute;
   z-index: 10000;
+  font-family: montserrat;
+  font-size: 1.1rem;
   top: 45%;
-  left: 42%;
-  margin: 0 auto;
+  left: 40%;
 }
 
 .box-port:hover .port-icon {
   display: flex;
+  align-items: center;
   animation: iconFade 0.8s ease-in-out;
   /* transform: translateY(2px); */
 }

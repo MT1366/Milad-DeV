@@ -69,20 +69,6 @@
   /* animation: picFade 0.5s ease; */
 }
 
-.icon-title {
-  top: 5.5rem;
-  left: 13.5rem;
-}
-
-.port-icon {
-  display: none;
-  position: absolute;
-  z-index: 10000;
-  top: 10rem;
-  left: 14.2rem;
-  margin: 0 auto;
-}
-
 .box-port::after {
   width: 91%;
   height: 89%;
