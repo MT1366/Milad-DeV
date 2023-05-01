@@ -10,9 +10,10 @@
 
 .navigation {
   flex-direction: column;
-  line-height: 3.5;
+  align-items: center;
+  /* line-height: ; */
   transition: all 1s;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .logo h1 {
