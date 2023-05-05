@@ -390,6 +390,7 @@ function testSlides(n) {
 setInterval(() => plusTestSlides(1), 3000);
 
 /////////////////// Reveal Section ///////////////////
+
 const allSection = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {

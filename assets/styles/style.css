@@ -181,6 +181,10 @@ a {
   font-family: poppins;
 }
 
+.navbar > li:hover {
+  border-bottom: 1px solid white;
+}
+
 /* .navbar span:hover {
   border-bottom: 2px solid white;
 } */
@@ -305,8 +309,8 @@ a {
   position: absolute;
   /* display: block; */
   z-index: -1;
-  width: 50vh;
-  height: 53vh;
+  width: 15%;
+  height: 80%;
   left: -1rem;
   top: 7rem;
   background-image: url(../img/dots.png);
@@ -314,7 +318,7 @@ a {
 
 .bio-txt {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   flex-direction: column;
   gap: 1rem;
   font-size: 1.5rem;
@@ -511,38 +515,25 @@ a {
 
 /* BUTTONS */
 
-.btns button {
-  position: relative;
-  display: inline;
-  left: -5px;
-  width: 24%;
+.cv {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 1rem;
+  text-decoration: none;
   border-radius: 5px;
   padding: 8px;
   transition: all 0.3s;
   border: 1px solid #1c1c1c;
   font-family: poppins;
   font-size: 12px;
-  top: -1rem;
-}
-
-.btns .cv {
   background-color: #1c1c1c;
   color: white;
+  /* top: -1rem; */
 }
 
-.btns .cv:hover {
+.cv:hover {
   background-color: #f6f6f6;
   color: black;
-}
-
-.contact {
-  color: black;
-  background-color: white;
-}
-
-.contact:hover {
-  background-color: #1c1c1c;
-  color: white;
 }
 
 /* SERVISEC SECTION */
@@ -561,19 +552,19 @@ a {
   font-family: montserrat;
   font-size: 40px;
   font-weight: bold;
-  padding-top: 2rem;
+  padding-top: 4rem;
 }
 
 .title::before {
   content: "";
   position: absolute;
-  display: flex;
-  left: 38%;
+  /* display: flex; */
+  left: 45%;
   z-index: 1;
   font-weight: bold;
-  width: 25%;
+  width: 10%;
   height: 10%;
-  top: 5.5rem;
+  top: 7.5rem;
   background-image: url(../img/dots.png);
 }
 
@@ -582,25 +573,29 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  padding: 7rem 0rem;
+  padding: 4rem 0rem;
   transition: all 0.5s;
 }
 
 .box {
   display: flex;
   position: relative;
-  top: -6rem;
+  /* top: -6rem; */
   flex-direction: column;
   border-radius: 5px;
   background-color: white;
   margin: 1rem;
   width: 24%;
-  height: 40vh;
+  height: 30vh;
   justify-content: center;
   padding: 2rem 2.2rem;
   align-items: center;
   box-shadow: 0px 10px 30px -8px rgb(181, 180, 180);
   transition: all 0.5s;
+}
+
+.box:hover {
+  transform: translateY(-1rem);
 }
 
 .box__icon {
@@ -652,7 +647,7 @@ a {
 
 /* PREVIEW SECTION */
 
-.btn-preview-close {
+/* .btn-preview-close {
   display: block;
   position: absolute;
 }
@@ -674,7 +669,7 @@ a {
 }
 
 .img-preview {
-  /* display: block; */
+  display: block;
   position: relative;
   z-index: 4000;
 }
@@ -707,22 +702,22 @@ a {
 .arrow-left:hover,
 .arrow-right:hover {
   color: white;
-}
+} */
 
 /* PORTFOLIO SECTION */
 
 .portfolio {
   position: relative;
   top: 25rem;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .port-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
   transition: all 0.3s;
+  margin-top: 1rem;
 }
 
 .port-title {
@@ -733,20 +728,19 @@ a {
   font-family: montserrat;
   font-size: 40px;
   font-weight: bold;
-  top: 2rem;
+  margin-top: 2rem;
 }
 
 .port-title::after {
   content: "";
   position: absolute;
-  display: flex;
-  left: 43%;
+  /* display: flex; */
+  left: 0;
   z-index: 1;
   font-weight: bold;
   width: 100%;
-  left: 0rem;
-  height: 4%;
-  top: 3.1rem;
+  height: 10%;
+  top: 4rem;
   background-image: url(../img/dots.png);
 }
 
@@ -759,7 +753,7 @@ a {
   left: 0rem;
   transition: all 0.5s;
   font-size: 10px;
-  top: 2rem;
+  /* top: 2rem; */
 }
 
 .port-list span {
@@ -769,7 +763,7 @@ a {
   color: #222;
   font-size: 20px;
   z-index: 2;
-  margin: 4rem 1rem;
+  margin: 3rem 1rem;
   /* border-bottom: 5px solid #000a11; */
 }
 
@@ -794,7 +788,6 @@ a {
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
-  padding: 1rem 5rem;
 }
 
 .box-port {
@@ -837,8 +830,9 @@ a {
 }
 
 .box-port .images {
-  width: 52vh;
-  margin: 1rem 2rem;
+  width: 50vh;
+  height: 35vh;
+  margin: 1rem;
   border-radius: 5px;
   /* animation: picFade 0.5s ease; */
 }
@@ -965,6 +959,8 @@ a {
 
 .testemonial {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   background-color: #f4f4f4;
@@ -973,8 +969,10 @@ a {
 }
 
 .test-content {
-  display: none;
+  display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   position: relative;
   animation: slideShow 0.8s ease;
 }
@@ -997,7 +995,9 @@ a {
 }
 
 .testemonial-img {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   width: 7rem;
   border-radius: 50%;
@@ -1006,7 +1006,7 @@ a {
 }
 
 .test-para {
-  display: block;
+  display: flex;
   font-family: poppins;
   text-align: center;
   padding: 1rem 9rem;
@@ -1015,7 +1015,7 @@ a {
   margin: 0;
   font-size: 14px;
   color: #748182;
-  margin-top: -5rem;
+  margin-top: -3rem;
 }
 
 .test-title {
@@ -1116,7 +1116,7 @@ a {
 .blog-container {
   position: relative;
   background-color: #f7f7f7;
-  padding: 7rem 6rem;
+  padding: 1rem 6rem;
 }
 
 #blog-boxes {
@@ -1129,20 +1129,9 @@ a {
   overflow: hidden;
 }
 
-/* #blog-boxes:hover {
+#blog-boxes:hover {
   animation: blogSlideShow 0.8s ease;
-  overflow: scroll;
-  /* width: 70%; */
-/* } */
-
-@keyframes blogSlideShow {
-  0% {
-    width: 70%;
-  }
-
-  100% {
-    width: 100%;
-  }
+  overflow: hidden;
 }
 
 .blog-box {
@@ -1151,12 +1140,12 @@ a {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  width: 40vh;
+  width: 30vh;
   overflow: hidden;
 }
 
 .blog-img img {
-  width: 40vh;
+  width: 30vh;
   display: flex;
   flex-direction: column;
   transform-origin: center center;
@@ -1208,7 +1197,7 @@ a {
   background-color: #748182;
   margin: 5px;
   left: 50%;
-  top: 4rem;
+  top: 1rem;
 }
 
 .blog-scroll-btn span:hover {
@@ -1315,23 +1304,23 @@ a {
   font-family: poppins;
 }
 
-.button {
-  position: relative;
-  display: flex;
-  width: 10%;
-  left: 25rem;
-  border-radius: 5px;
-  padding: 8px;
-  transition: all 0.3s;
-  border: 1px solid #1c1c1c;
-  font-family: poppins;
-  font-size: 12px;
-  top: -1rem;
-  background-color: #111;
-  color: white;
+/* FOOTER section */
+/* 
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  background-color: #5c5b5b;
 }
 
-.button:hover {
-  background-color: white;
-  color: #000a11;
+.footer-right {
+  background-color: #afb9b9;
+  padding: 5rem;
+  height: 100%;
 }
+
+.footer-left {
+  background-color: royalblue;
+  padding: 5rem;
+  height: 100%;
+} */
