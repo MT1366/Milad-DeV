@@ -126,24 +126,6 @@ window.addEventListener("scroll", (e) => {
 
 ////////////////////////////////////////////////
 
-contactBtn.addEventListener("click", function () {
-  contactSection.scrollIntoView({ behavior: "smooth" });
-  contactBtn.style.borderBottom = "2px solid white";
-});
-
-window.addEventListener("scroll", (e) => {
-  if (window.pageYOffset >= 4800) {
-    contactBtn.style.borderBottom = "2px solid white";
-    aboutBtn.style.borderBottom = "none";
-    servicesBtn.style.borderBottom = "none";
-    workBtn.style.borderBottom = "none";
-    clientBtn.style.borderBottom = "none";
-    blogBtn.style.borderBottom = "none";
-  } else {
-    contactBtn.style.borderBottom = "none";
-  }
-});
-
 //////////////////////////////////////////////////
 
 ///////////////////// NAVBAR /////////////////////
@@ -356,69 +338,6 @@ graphicBtn.addEventListener("click", function () {
   }
 });
 
-//////////////////// PREVIEW /////////////////////
-
-///////////// Open and Close section /////////////
-let closeBtn = document.querySelector(".button-close");
-let showPreview = document.querySelectorAll(".show-preview");
-let preview = document.querySelector(".preview");
-let hidePreview = document.querySelector(".hidden-preview");
-
-hidePreview.addEventListener("click", function () {
-  // preview.classList.add("hidden-preview");
-});
-
-showPreview.forEach((showPreview) => {
-  showPreview.addEventListener("click", function () {
-    preview.classList.toggle("hidden-preview");
-  });
-});
-
-closeBtn.addEventListener("click", function () {
-  preview.classList.add("hidden-preview");
-});
-
-// preview.addEventListener("click", function () {
-//   preview.classList.add("hidden-preview");
-// });
-
-////////////////// Slide Show Section ////////////////////
-
-let slideIndex = 1;
-showSlides(slideIndex[i]);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlides(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("img-preview");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-
-  for (i = 0; i < dots.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-let arrLeft = document.querySelector("arrow-left");
-let arrRight = document.querySelector("arrow-right");
-
 ////////////////// Slide Show Testemonial ////////////////////
 
 let testIndex = 1;
@@ -450,10 +369,27 @@ function testSlides(n) {
   // testDots[testIndex - 1].className += " active";
 }
 
-setInterval(() => plusTestSlides(1), 5000);
+setInterval(() => plusTestSlides(1), 3000);
 
-/////////////////// Dragg scroll ///////////////////
+/////////////////// Reveal Section ///////////////////
+const allSection = document.querySelectorAll(".section");
 
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  entry.target.classList.remove("section--hidden");
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.1,
+});
+
+allSection.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
+});
 ////////////////// Slide Show Our blog ////////////////////
 
 /////////////////// Animatted Counter ///////////////////

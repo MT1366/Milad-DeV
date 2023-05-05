@@ -5,6 +5,10 @@
   transition: all 0.5s;
 }
 
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
 /* html {
   transition: all 0.5s;
 } */
@@ -93,7 +97,7 @@ a {
   }
 }
 
-.section {
+.intro-section {
   position: relative;
   background-image: url("../img/bg.jpg");
   background-size: cover;
@@ -103,11 +107,11 @@ a {
   transition: all 0.5s;
 }
 
-.section * {
+.intro-section * {
   z-index: 10;
 }
 
-.section::after {
+.intro-section::after {
   content: "";
   position: absolute;
   top: 0;
@@ -162,7 +166,7 @@ a {
   list-style: none;
   /* width: 50%; */
   align-items: center;
-  gap: 1.5rem;
+  gap: 2.5rem;
   transition: all 0.5s;
 }
 
@@ -1331,5 +1335,3 @@ a {
   background-color: white;
   color: #000a11;
 }
-
-/* //////// RESPONSIVNESS SECTION ////////// */
