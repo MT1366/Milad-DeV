@@ -126,6 +126,24 @@ window.addEventListener("scroll", (e) => {
 
 ////////////////////////////////////////////////
 
+// contactBtn.addEventListener("click", function () {
+//   contactSection.scrollIntoView({ behavior: "smooth" });
+//   contactBtn.style.borderBottom = "2px solid white";
+// });
+
+// window.addEventListener("scroll", (e) => {
+//   if (window.pageYOffset >= 4800) {
+//     contactBtn.style.borderBottom = "2px solid white";
+//     aboutBtn.style.borderBottom = "none";
+//     servicesBtn.style.borderBottom = "none";
+//     workBtn.style.borderBottom = "none";
+//     clientBtn.style.borderBottom = "none";
+//     blogBtn.style.borderBottom = "none";
+//   } else {
+//     contactBtn.style.borderBottom = "none";
+//   }
+// });
+
 //////////////////////////////////////////////////
 
 ///////////////////// NAVBAR /////////////////////
