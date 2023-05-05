@@ -13,7 +13,7 @@ let contactBtn = document.querySelector("#contact");
 ////////////////// Navigation SECTIONS //////////////////////
 const abouteMeSection = document.querySelector(".aboute-me");
 const servicesSection = document.querySelector(".services");
-const poertfolioSection = document.querySelector(".portfolio");
+const poertfolioSection = document.querySelector(".port-content");
 const testemonialSection = document.querySelector(".testemonial");
 const blogSection = document.querySelector(".blog-container");
 const contactSection = document.querySelector(".contact-us");
@@ -25,7 +25,9 @@ const head = document.querySelector(".head");
 
 const stickyNav = function (entries) {
   const [entry] = entries;
-  if (!entry.isIntersecting) navigation.classList.add("sticky");
+  console.log();
+  if (!entry.isIntersecting && entry.boundingClientRect.width > 700)
+    navigation.classList.add("sticky");
   else navigation.classList.remove("sticky");
 };
 
@@ -35,6 +37,7 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 });
 
 headerObserver.observe(head);
+// console.log(headerObserver.observe(head));
 
 ////////////// Scroll Event ///////////////////
 
@@ -147,18 +150,6 @@ window.addEventListener("scroll", (e) => {
 //////////////////////////////////////////////////
 
 ///////////////////// NAVBAR /////////////////////
-let navLink = document.querySelectorAll(".navbar span");
-const swapCollorToBlack = function () {
-  for (let x = 0; x < navLink.length; x++) {
-    navLink[x].style.color = "black";
-  }
-};
-
-const swapCollorToWhite = function () {
-  for (let x = 0; x < navLink.length; x++) {
-    navLink[x].style.color = "white";
-  }
-};
 
 let navigation = document.querySelector(".navigation");
 let logo = document.querySelector(".logo");
@@ -395,7 +386,6 @@ const allSection = document.querySelectorAll(".section");
 
 const revealSection = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   entry.target.classList.remove("section--hidden");
 };

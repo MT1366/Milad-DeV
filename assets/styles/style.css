@@ -5,6 +5,10 @@
   transition: all 0.5s;
 }
 
+.navigation-mobile {
+  display: none;
+}
+
 .section--hidden {
   opacity: 0;
   transform: translateY(8rem);
@@ -1305,7 +1309,7 @@ a {
 }
 
 /* FOOTER section */
-/* 
+
 .footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1323,4 +1327,5 @@ a {
   background-color: royalblue;
   padding: 5rem;
   height: 100%;
-} */
+  /* width: 100vw; */
+}
