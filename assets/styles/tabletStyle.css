@@ -31,10 +31,27 @@
   display: block;
 }
 
+.img::before {
+  content: "";
+  position: absolute;
+  /* display: block; */
+  z-index: -1;
+  width: 55%;
+  height: 42%;
+  left: 6rem;
+  top: 6.5rem;
+  background-image: url(../img/dots.png);
+}
+
 .bio {
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.cv {
+  width: 21%;
 }
 
 .bio-txt {
