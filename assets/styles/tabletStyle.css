@@ -51,7 +51,9 @@
 }
 
 .cv {
-  width: 21%;
+  display: inline-block;
+  width: 27%;
+  text-align: center;
 }
 
 .bio-txt {
